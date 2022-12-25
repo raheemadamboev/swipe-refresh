@@ -14,6 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.google.accompanist.swiperefresh.SwipeRefresh
+import com.google.accompanist.swiperefresh.SwipeRefreshIndicator
 import com.google.accompanist.swiperefresh.rememberSwipeRefreshState
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -41,6 +42,14 @@ class MainActivity : ComponentActivity() {
                                 delay(3_000L)
                                 loading = false
                             }
+                        },
+                        indicator = { state, trigger ->
+                            SwipeRefreshIndicator(
+                                state = state,
+                                refreshTriggerDistance = trigger,
+                                contentColor = MaterialTheme.colorScheme.onPrimary,
+                                backgroundColor = MaterialTheme.colorScheme.primary
+                            )
                         },
                         modifier = Modifier.fillMaxSize()
                     ) {
