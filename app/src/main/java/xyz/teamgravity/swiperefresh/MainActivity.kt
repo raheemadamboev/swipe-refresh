@@ -21,6 +21,7 @@ import kotlinx.coroutines.launch
 import xyz.teamgravity.swiperefresh.ui.theme.SwipeRefreshTheme
 
 class MainActivity : ComponentActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
