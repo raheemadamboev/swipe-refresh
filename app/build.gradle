@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace 'xyz.teamgravity.swiperefresh'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "xyz.teamgravity.swiperefresh"
         minSdk 23
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -70,4 +70,7 @@ dependencies {
 
     // lifecycle
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1'
+
+    // swipe refresh
+    implementation "com.google.accompanist:accompanist-swiperefresh:0.28.0"
 }
